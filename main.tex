@@ -12,59 +12,106 @@
 \pagestyle{empty} 
 
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{15pt}{3pt}
+\titlespacing{\section}{0pt}{3pt}{3pt}
 
+\usepackage{longtable} % Required for tables that span multiple pages
+\setlength{\LTpre}{0pt} % Remove default whitespace before longtable
+\setlength{\LTpost}{0pt} % Remove default whitespace after longtable
+
+% Environment to hold a new list of entries
+\newenvironment{entrylist}{
+	\begin{longtable}[H]{l l}
+}{
+	\end{longtable}
+}
+
+\newcommand{\entry}[4]{% First argument for the leftmost date(s) text, second is for the bold entry heading, third is for the bold right-aligned entry qualifier and the fourth is for the entry description
+	\parbox[t]{0.175\textwidth}{
+		#1 % Leftmost entry date(s) text
+	}%
+	&\parbox[t]{0.775\textwidth}{
+		\textbf{#2}\\
+		{\footnotesize \textbf{\textcolor{black}{#3}}}\\
+		#4 
+	}\\\\}
+
+% Command to output a separator slash between lists, e.g. '  /  '
+\newcommand{\slashsep}{\hspace{3mm}/\hspace{3mm}}
 
 \begin{document}
 
-\par{\centering
+\par{\raggedleft
 		{\Huge Nicolas \textsc{Dabreo}
 	}\bigskip\par}
 
-\begin{tabular}{rl}
-    \textsc{phone:}     & +39 123 456789\\
-    \textsc{email:}     & alessandro.plasmati@gmail.com\\
-    \textsc{linkedin:}     & alessandro.plasmati@gmail.com\\
-    \textsc{github:}     & https://github.com/dabsy\\
-    \textsc{website:}     & https://dabreo.dev/
-\end{tabular}
+\raggedleft{\begin{tabular}{c | r}
+    \textsc{phone:}     & 07495 766611\\
+    \textsc{email:}     & \href{nick.dabreo@hotmail.com}{nick.dabreo@hotmail.com}\\
+    \textsc{linkedin:}     & \href{https://www.linkedin.com/in/nickdabreo/}{https://www.linkedin.com/in/nickdabreo/}\\
+    \textsc{github:}     & \href{https://github.com/dabsy}{https://github.com/dabsy}\\
+    \textsc{website:}     & \href{https://dabreo.dev/}{https://dabreo.dev/}
+\end{tabular}}
+
+\vspace{30pt}
+
+\centering
+An enthusiastic and motivated young individual with a lifelong passion for computing, technology and
+gaming who is currently searching for an apprenticeship in software and website development. I have
+experience working in a team during my time at college creating a website designed per a customer’s
+requirements, as well as taking a leadership role in developing a computer game within a small group
+and I can work and learn effectively on my own initiative.
+
+\vspace{10pt}
 
 \section{Skills}
 
 \begin{tabular}{rl}
-Computer Languages & Prolog, Haskell, AWK, Erlang, Scheme, ML \\
-Protocols \& APIs & XML, JSON, SOAP, REST \\
-Databases & MySQL, PostgreSQL, Microsoft SQL \\
-Tools & SVN, Vim, Emacs
+    Proficient & Elixir, Phoenix, JavaScript, React, Git, TDD, HTML, CSS, JIRA \\
+    Intermediate & Cowboy, TypeScript, Express, PostgreSQL, Redis, Docker, Unix, \LaTeX \\
+    Beginner & Erlang, Kotlin, Linux, MySQL, MongoDB, AWS \\
 \end{tabular}
 
 \section{Work Experience}
 
 \begin{tabular}{r|p{11cm}}
- \emph{Current} & Trader at \textsc{Enoi} s.p.a., Milan \\\textsc{Jan 2009}&\emph{Physical Natural Gas Trading}\\&\footnotesize{Provided analysis of spreads, in particular time and location spreads, with emphasis on trading opportunities on the curve, also taking into account the availability of storage facilities. Became familiar with logistic implications of physical gas trading and developed knowledge of continental virtual hubs for gas exchange.}\\\multicolumn{2}{c}{} \\
- \textsc{Jul-Oct 2008} & 1\textsuperscript{st} year Analyst at \textsc{Lehman Brothers}, London \\&\emph{Commodities Structured Trading}\\&\footnotesize{Developed spreadsheets for risk analysis on exotic derivatives on a wide array of commodities (\textit{ags, oils, precious} and \textit{base metals}), managed blotter and secondary trades on structured notes, liaised with Middle Office, Sales and Structuring for bookkeeping.}\\\multicolumn{2}{c}{} \\
-\textsc{Summer 2007} & Summer Intern at \textsc{Lehman Brothers}, \emph{Capital Markets}\\&\footnotesize{Received pre-placed offer from the Exotics Trading Desk as a result of very positive review. Rated ``\emph{truly distinctive}'' for Analytical Skills and Teamwork.}
+    \emph{Current} & \textit{Apprentice Full-Stack Developer} at \textsc{Square Enix}, London\\
+    \textsc{Apr 2018} &\footnotesize{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet purus semper, placerat augue eget, faucibus leo. Duis consectetur orci dapibus, convallis augue nec, tempor nunc. Phasellus porta lorem in lorem mollis, a viverra dui vulputate. Donec faucibus vel odio ac pharetra. Maecenas placerat imperdiet dui id vehicula.}\\
+    \multicolumn{2}{c}{} \\
 \end{tabular}
 
 \section{Education}
 
-\begin{tabular}{rl}	
- \textsc{July} 2008 & Master of Science in \textsc{Finance}, \textbf{Bocconi University}, Milan\\
-& 110/110 \small\emph{summa cum laude} | Major: Quantitative Finance\\
-& Thesis: ``Sublinear and Locally Sublinear Prices'' | \small Advisor: Prof. Erio \textsc{Castagnoli}\\
-&\normalsize \textsc{Gpa}: 28.61/30\\&\\
-\textsc{July} 2006& Undergraduate Degree in \textsc{Law} and \textsc{Business Administration} \\&110/110 \small\emph{summa cum laude}, \normalsize\textbf{Bocconi University}, Milan\\
-& Thesis: ``Portfolio Strategies with Target Prices'' | \small Advisor: Stefano \textsc{Bonini}\\
-&\normalsize \textsc{Gpa}: 29.85/30\\&\\
-\textsc{Fall} 2005& Exchange Semester at \textbf{University of Southern California}, Los Angeles\\
-&\textsc{Gpa}: 3.875/4 \\&\\
-\textsc{July} 2003& \textbf{Liceo Classico ``E. Duni''}, Matera | Final Grade: 100/100
-\end{tabular}
+\begin{entrylist}
+    \entry
+        {2018 - 2019}
+        {Level 4 Software Development Apprenticeship}
+        {Corndel Sofware Engineering Academy, London}
+        {Grade: TBD}
+	\entry
+		{2014 – 2016}
+		{BTEC Level 3 Extended National Diploma in IT}
+		{West Suffolk College, Bury St Edmunds}
+		{Grade: D*D*D}
+\end{entrylist}
+
+\section{Awards}
+
+\begin{entrylist}
+    \entry
+        {2018}
+        {Level 4 Diploma, Software Engineering Methodologies}
+        {BCS, The Chartered Institute for IT}
+        {}
+	\entry
+		{2018}
+		{Programming in HTML5 with JavaScript and CSS3}
+        {Microsoft}
+        {}
+\end{entrylist}
 
 \section{Interests and Activities}
 
-Technology, Open-Source, Programming\\
-Paradoxes in Decision Making, Psychoanalysis, Behavioural Finance\\
-Football, Travelling
+PC Building, Guitar, Dungeons \& Dragons, TableTop Games\\
+Video Games, Cooking, Behavioural Finance
 
 \end{document}
