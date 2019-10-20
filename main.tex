@@ -14,30 +14,6 @@
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{3pt}{3pt}
 
-\usepackage{longtable} % Required for tables that span multiple pages
-\setlength{\LTpre}{0pt} % Remove default whitespace before longtable
-\setlength{\LTpost}{0pt} % Remove default whitespace after longtable
-
-% Environment to hold a new list of entries
-\newenvironment{entrylist}{
-	\begin{longtable}[H]{l l}
-}{
-	\end{longtable}
-}
-
-\newcommand{\entry}[4]{% First argument for the leftmost date(s) text, second is for the bold entry heading, third is for the bold right-aligned entry qualifier and the fourth is for the entry description
-	\parbox[t]{0.175\textwidth}{
-		#1 % Leftmost entry date(s) text
-	}%
-	&\parbox[t]{0.775\textwidth}{
-		\textbf{#2}\\
-		{\footnotesize \textbf{\textcolor{black}{#3}}}\\
-		#4 
-	}\\\\}
-
-% Command to output a separator slash between lists, e.g. '  /  '
-\newcommand{\slashsep}{\hspace{3mm}/\hspace{3mm}}
-
 \begin{document}
 
 \par{\raggedleft
@@ -53,65 +29,64 @@
 \end{tabular}}
 
 \vspace{30pt}
-
 \centering
-An enthusiastic and motivated young individual with a lifelong passion for computing, technology and
-gaming who is currently searching for an apprenticeship in software and website development. I have
-experience working in a team during my time at college creating a website designed per a customer’s
-requirements, as well as taking a leadership role in developing a computer game within a small group
-and I can work and learn effectively on my own initiative.
 
-\vspace{10pt}
+
 
 \section{Skills}
 
+
 \begin{tabular}{rl}
-    Proficient & Elixir, Phoenix, JavaScript, React, Git, TDD, HTML, CSS, JIRA \\
-    Intermediate & Cowboy, TypeScript, Express, PostgreSQL, Redis, Docker, Unix, \LaTeX \\
-    Beginner & Erlang, Kotlin, Linux, MySQL, MongoDB, AWS \\
+    \textsc{Proficient} & Elixir, Phoenix, JavaScript, React, Git, TDD, HTML, CSS, SASS, JIRA \\
+    \textsc{Intermediate} & MongoDB, TypeScript, Express, PostgreSQL, Redis, Docker, Unix, \LaTeX \\
+    \textsc{Beginner} & Erlang, Kotlin, Linux, MySQL, AWS \\
 \end{tabular}
+
+\vspace{15pt}
 
 \section{Work Experience}
 
 \begin{tabular}{r|p{11cm}}
-    \emph{Current} & \textit{Apprentice Full-Stack Developer} at \textsc{Square Enix}, London\\
-    \textsc{Apr 2018} &\footnotesize{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet purus semper, placerat augue eget, faucibus leo. Duis consectetur orci dapibus, convallis augue nec, tempor nunc. Phasellus porta lorem in lorem mollis, a viverra dui vulputate. Donec faucibus vel odio ac pharetra. Maecenas placerat imperdiet dui id vehicula.}\\
+    \emph{Current} & \textit{Apprentice Back-End Developer} at \textsc{Square Enix}, London\\
+    \textsc{Nov 2018} &\footnotesize{Rebuilt an Express application Back-End in Phoenix improving its functionality and 
+    fault tolerance. Developed a Full-Stack application in Phoenix for allowing external Influencers to submit their data to 
+    \textsc{Square Enix} for improved contact, upholding strict user PII safety. Assisted with the development of a 
+    TypeScript-Express-MongoDB CMS Back-End and a set of Cowboy public APIs in Elixir. All while contributing to the maintenance of the 
+    login authentication system \href{https://membership.square-enix-games.com}{Membership}, tackling much legacy code 
+    following the rewrite from Ruby to Elixir and the on-going implementation of the Event Sourcing pattern.} \\
+    \multicolumn{2}{c}{} \\
+    
+    \textsc{Apr 2018} & \textit{Apprentice Front-End Developer} at \textsc{Square Enix}, London\\
+    &\footnotesize{I assisted in maintaining React and Express based webapps such as 
+    \href{https://justcause.square-enix-games.com}{Just Cause} and \href{https://tombraider.square-enix-games.com}{Tomb Raider}
+    implementing bug fixes, assisting with migration from SASS to \href{https://www.styled-components.com/}{Styled Components}
+    as well as building a Full-Stack Express application for our QA team which provides a view of how our internal 
+    environments look when shared on social media platforms.}\\
     \multicolumn{2}{c}{} \\
 \end{tabular}
 
 \section{Education}
 
-\begin{entrylist}
-    \entry
-        {2018 - 2019}
-        {Level 4 Software Development Apprenticeship}
-        {Corndel Sofware Engineering Academy, London}
-        {Grade: TBD}
-	\entry
-		{2014 – 2016}
-		{BTEC Level 3 Extended National Diploma in IT}
-		{West Suffolk College, Bury St Edmunds}
-		{Grade: D*D*D}
-\end{entrylist}
+
+\begin{tabular}{r|p{11cm}}
+    \textsc{2018 - 2019} & \textit{Level 4 Software Development Apprenticeship}\\
+    &\textsc{Corndel Sofware Engineering Academy}, London\\
+    &\footnotesize{Grade: -}\\
+    \multicolumn{2}{c}{} \\
+    
+    \textsc{Apr 2018} & \textit{BTEC Level 3 Extended National Diploma in IT}\\
+    &\textsc{West Suffolk College}, Bury St Edmunds\\
+    &\footnotesize{Grade: Distinction*, Distinction*, Distinction}\\
+    \multicolumn{2}{c}{} \\
+\end{tabular}
 
 \section{Awards}
 
-\begin{entrylist}
-    \entry
-        {2018}
-        {Level 4 Diploma, Software Engineering Methodologies}
-        {BCS, The Chartered Institute for IT}
-        {}
-	\entry
-		{2018}
-		{Programming in HTML5 with JavaScript and CSS3}
-        {Microsoft}
-        {}
-\end{entrylist}
 
-\section{Interests and Activities}
-
-PC Building, Guitar, Dungeons \& Dragons, TableTop Games\\
-Video Games, Cooking, Behavioural Finance
+\begin{tabular}{rl}
+    \textsc{2018} & \textit{Software Engineering Methodologies} from \textsc{BCS, The Chartered Institute for IT}\\
+    
+    \textsc{2018} & \textit{Programming in HTML5 with JavaScript and CSS3} from \textsc{Microsoft}\\
+\end{tabular}
 
 \end{document}
