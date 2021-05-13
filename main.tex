@@ -6,7 +6,17 @@
 \usepackage{titlesec}
 \usepackage{mathpazo}
 \usepackage[protrusion=true, expansion=true]{microtype}
-\usepackage{hyperref}
+
+\usepackage[empty]{fullpage}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+\usepackage{tabularx}
+\usepackage{enumitem}
 
 \linespread{1.05}
 \pagestyle{empty} 
@@ -14,64 +24,126 @@
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{3pt}{3pt}
 
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------
+% Document
+
 \begin{document}
 
-\par{\raggedleft
-		{\Huge Nicolas \textsc{Dabreo}
-	}\bigskip\par}
+\begin{center}
+    {\Huge \scshape Nicolas Dabreo} \\ \vspace{1pt}
+    \small \href{mailto:nickj.dabreo@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{nickj.dabreo@gmail.com}} ~ 
+    \href{https://linkedin.com/in/nickdabreo}{\raisebox{-0.2\height}\faLinkedin\ \underline{https://linkedin.com/in/nickdabreo}}  ~
+    \href{https://gitlab.com/Dabsy}{\raisebox{-0.2\height}\faGitlab\ \underline{gitlab.com/Dabsy}}
+\end{center}
+\vspace{8pt}
 
-\raggedleft{\begin{tabular}{c | r}
-    \textsc{phone:}     & 07495 766611\\
-    \textsc{email:}     & \href{nick.dabreo@hotmail.com}{nick.dabreo@hotmail.com}\\
-    \textsc{linkedin:}     & \href{https://www.linkedin.com/in/nickdabreo/}{https://www.linkedin.com/in/nickdabreo/}\\
-    \textsc{github:}     & \href{https://github.com/dabsy}{https://github.com/dabsy}\\
-    \textsc{website:}     & \href{https://dabreo.dev/}{https://dabreo.dev/}
-\end{tabular}}
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Stitched}{October 2020 -- Current}
+      {Backend Developer}{Remote}
+      \resumeItemListStart
+        \resumeItem{Utilised Phoenix LiveView to rewrite multiple Rails webpages into LiveViews, creating JSON APIs on the Rails system for them to consume.}
+        \resumeItem{Planned and implemented a complete port of the Rails based authentication and session systems to Phoenix, utilising a custom session store for communicating with the Redis instance and using PubSub to update LiveViews session data asynchronously.}
+        \resumeItem{Split a complex React SPA for creating custom products into two separate LiveViews, in a push for cross-site UX improvement.}
+      \resumeItemListEnd
 
-\vspace{30pt}
+    \resumeSubheading
+      {Square Enix}{August 2019 -- October 2020}
+      {Junior Backend Developer}{London}
+      \resumeItemListStart
+        \resumeItem{Developed and maintained features within Square Enix's backend microservices involving products such as JSON APIs used for game services, a central database library for domain logic, a Phoenix application for authentication across many platforms and SSO providers, a React administration app and a secondary lightweight React administration app for Customer Service.}
+        \resumeItem{Greenfield Phoenix application for third party mobile game developers to create accounts and submit their requests for games involving Square Enix IPs. Providing insight and access to the process, necessary paperwork, assets and feedback for their projects.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Square Enix}{April 2018 -- August 2019}
+      {Apprentice Web Developer}{London}
+      \resumeItemListStart
+        \resumeItem{Greenfield React application to visualise how a webpage on internal environments looks when shared on social media platforms.}
+        \resumeItem{Greenfield Phoenix application for social media influencers to submit their contact details to Square Enix, providing an administration dashboard.}
+        \resumeItem{Developed a suite of Headless CMS APIs for publishing and serving data to a collection web services.}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{5pt}
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Level 4 Software Development Apprenticeship}{2018 - 2019}
+      {Corndel Software Engineering Academy}{London}
+
+    \resumeSubheading
+      {BTEC Level 3 Extended National Diploma in IT}{2014 - 2016}
+      {West Suffolk College}{Bury St. Edmunds}
+  \resumeSubHeadingListEnd
+\vspace{8pt}
+
+\section{Awards}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Software Engineering Methodologies}{2018}
+      {BCS, The Chartered Institute for IT}{}
+
+    \resumeSubheading
+      {Programming in HTML5 with JavaScript and CSS3}{2018}
+      {Microsoft}{}
+  \resumeSubHeadingListEnd
+\vspace{8pt}
+
 \centering
 
 \section{Skills}
 \begin{tabular}{rl}
-    \textsc{Proficient} & Elixir, Phoenix, JavaScript, React, Git, TDD, HTML, CSS, SASS, JIRA \\
-    \textsc{Intermediate} & MongoDB, TypeScript, Express, PostgreSQL, Redis, Docker, Unix, \LaTeX \\
-    \textsc{Beginner} & Erlang, Kotlin, Linux, MySQL, AWS \\
-\end{tabular}
-
-\vspace{15pt}
-
-\section{Work Experience}
-\begin{tabular}{r|p{11cm}}
-    \emph{Current} &\textit{Junior Back-End Developer} at \textsc{Square Enix}, London\\
-    \textsc{Nov 2018} &\footnotesize{Developed and maintained a collection of microservices making up the Square Enix's back-end user authentication service, Membership. \newline - Elixir/Phoenix/Cowboy/MySQL/PosgreSQL/Redis/MongoDB/React/SASS} \\
-    &\footnotesize{Developed a online platform for third party game developers create company accounts in order to receive necessary paperwork, assets and feedback for their projects. \newline - Elixir/Phoenix/PostgreSQL/Redis/SASS} \\
-    \multicolumn{2}{c}{} \\
-    
-    \textsc{Apr 2018} & \textit{Apprentice Web Developer} at \textsc{Square Enix}, London\\
-    & \footnotesize{Maintained and improved interactive websites \href{https://justcause.square-enix-games.com}{Just Cause} and \href{https://tombraider.square-enix-games.com}{Tomb Raider} according to design specifications. \newline - React/Redux/SASS} \\
-    & \footnotesize{Developed a web application to visualise how a webpage on internal environments looks when shared on social media platforms. \newline - NodeJS/Express/React} \\
-    & \footnotesize{Developed a web application for social media influencers to submit their contact details to Square Enix, providing an administration dashboard. \newline - Elixir/Phoenix/PostgreSQL} \\
-    & \footnotesize{Developed a Headless CMS interface and set of public APIs for a collection of Gatsby websites to consume. \newline - TypeScript/React/Express/MongoDB/Elixir/Cowboy} \\
-    \multicolumn{2}{c}{} \\
-\end{tabular}
-
-\section{Education}
-\begin{tabular}{r|p{11cm}}
-    \textsc{2018 - 2019} & \textit{Level 4 Software Development Apprenticeship}\\
-    &\textsc{Corndel Sofware Engineering Academy}, London\\
-    &\footnotesize{Grade: -}\\
-    \multicolumn{2}{c}{} \\
-    
-    \textsc{Apr 2018} & \textit{BTEC Level 3 Extended National Diploma in IT}\\
-    &\textsc{West Suffolk College}, Bury St Edmunds\\
-    &\footnotesize{Grade: Distinction*, Distinction*, Distinction}\\
-    \multicolumn{2}{c}{} \\
-\end{tabular}
-
-\section{Awards}
-\begin{tabular}{rl}
-    \textsc{2018} & \textit{Software Engineering Methodologies} from \textsc{BCS, The Chartered Institute for IT}\\
-    \textsc{2018} & \textit{Programming in HTML5 with JavaScript and CSS3} from \textsc{Microsoft}\\
+    \textbf{Languages} & \textbf{Elixir}, \textbf{JavaScript}, TypeScript, Ruby \\
+    \textbf{Frameworks} & \textbf{Phoenix LiveView}, \textbf{React}, Express, Rails \\
+    \textbf{Tools} &  \textbf{Git}, \textbf{TDD}, \textbf{Docker}, Linux, Kubernetes, GCP, \textbf{PostgreSQL}, MongoDB, \textbf{Redis} \\
 \end{tabular}
 
 \end{document}
