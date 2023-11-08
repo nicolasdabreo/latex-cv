@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1699398801 "/home/nicolas/dev/megalixir/latex-cv/main.tex" "main.pdf" "main" 1699398802
+["pdflatex"] 1699438023 "/home/nicolas/dev/megalixir/latex-cv/main.tex" "main.pdf" "main" 1699438023
   "/etc/texmf/web2c/texmf.cnf" 1699390717 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/nicolas/dev/megalixir/latex-cv/main.tex" 1699398801 7851 83a45bf02c6422afdca5c0f8f1b1112c ""
+  "/home/nicolas/dev/megalixir/latex-cv/main.tex" 1699438023 7848 e04f9e65a3c9ba721207b3eb5f82447f ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/fontawesome5/fa5brands0.enc" 1622837620 2920 d63721872b8c77041b88e51b8f7c291d ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free1.enc" 1622837620 3042 0e2b14b9be7d01075a4c4591d5d1781b ""
@@ -115,9 +115,9 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1699391979 4379155 98693266ff65f58d9f98aff394de12d2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1699391996 2799789 de6528e34e8f7eaba35a1ecf955d8ab1 ""
-  "main.aux" 1699398802 1193 2ede492f384a7a09377dffc69190ce35 "pdflatex"
-  "main.out" 1699398802 370 9a5b93ee52a6c09b7e1035c916dc7d66 "pdflatex"
-  "main.tex" 1699398801 7851 83a45bf02c6422afdca5c0f8f1b1112c ""
+  "main.aux" 1699438023 1193 2ede492f384a7a09377dffc69190ce35 "pdflatex"
+  "main.out" 1699438023 370 9a5b93ee52a6c09b7e1035c916dc7d66 "pdflatex"
+  "main.tex" 1699438023 7848 e04f9e65a3c9ba721207b3eb5f82447f ""
   (generated)
   "main.aux"
   "main.log"
