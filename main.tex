@@ -77,39 +77,72 @@
 
 \begin{center}
     {\Huge \scshape Nicolas Dabreo} \\ \vspace{1pt}
-    \small \href{mailto:nickj.dabreo@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{nickj.dabreo@gmail.com}} ~ 
-    \href{https://linkedin.com/in/nickdabreo}{\raisebox{-0.2\height}\faLinkedin\ \underline{https://linkedin.com/in/nickdabreo}}  ~
-    \href{https://gitlab.com/Dabsy}{\raisebox{-0.2\height}\faGitlab\ \underline{gitlab.com/Dabsy}}
+    \small \href{mailto:nicolas@megalixir.co.uk}{\raisebox{-0.2\height}\faEnvelope\  \underline{nicolas@megalixir.co.uk}} ~ 
+    \href{https://linkedin.com/in/nicolasdabreo}{\raisebox{-0.2\height}\faLinkedin\ \underline{nicolasdabreo}}  ~
+    \href{https://github.com/nicolasdabreo}{\raisebox{-0.2\height}\faGithub\ \underline{nicolasdabreo}}
 \end{center}
 \vspace{8pt}
 
 \section{Experience}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Stitched}{October 2020 -- Current}
-      {Backend Developer}{Remote}
+      {Team Engine}{Oct 2021 -- Oct 2023}
+      {Full-Stack Developer}{Contract}
       \resumeItemListStart
-        \resumeItem{Utilised Phoenix LiveView to rewrite multiple Rails webpages into LiveViews, creating JSON APIs on the Rails system for them to consume.}
-        \resumeItem{Planned and implemented a complete port of the Rails based authentication and session systems to Phoenix, utilising a custom session store for communicating with the Redis instance and using PubSub to update LiveViews session data asynchronously.}
-        \resumeItem{Split a complex React SPA for creating custom products into two separate LiveViews, in a push for cross-site UX improvement.}
+        \resumeItem{Inherited a 5-year fintech project focused on contractor/freelancer onboarding, contracting and payment built by two junior developers who left before just before arrival. Elixir, PostgreSQL}
+        \resumeItem{Migrated multi-dyno Heroku app to highly available AWS infra due to hard cap on number of websocket connections from dynos and escalating costs, included load balancing, terraform, earthly, GitHub actions}
+        \resumeItem{Handling requested manual database changes and exports from production daily, lots of SQL}
+        \resumeItem{Custom admin dashboard to lessen the huge amount daily of database requests, Phoenix LiveView, SQL}
+        \resumeItem{Implemented project management tools and huge amounts of documentation to a company with nothing}
+        \resumeItem{Dashboard for project admins to export massive amounts of contractor timesheets in various states of approval, using long running background jobs, PubSub, PDF tools for splitting/generating/filling/splitting}
+        \resumeItem{Led another developer and a designer in a front-end overhaul project, creating a reusable component system, replacing 3000+ line jQuery file with modern JS and implementing web accessibility principles}
+        \resumeItem{Reworked S3 document storage to use presigned uploads/downloads \& background antivirus scans}
+        \resumeItem{Updated from DocuSignAPI v1 to v2 follwing its deprecation. Then expanding the implementation to allow conditional signatories on documents as well as allowing project controlled priority of signatures}
+        \resumeItem{Helped spec/plan the back-end for and then subsequently built the front-end portion of a CQRS/ES document distribution service, using Phoenix LiveView and PubSub for handling eventual consistency}
       \resumeItemListEnd
 
     \resumeSubheading
-      {Square Enix}{August 2019 -- October 2020}
-      {Junior Backend Developer}{London}
+      {Stitched}{Oct 2020 -- Oct 2021}
+      {Full-Stack Developer}{Permanent}
       \resumeItemListStart
-        \resumeItem{Developed and maintained features within Square Enix's backend microservices involving products such as JSON APIs used for game services, a central database library for domain logic, a Phoenix application for authentication across many platforms and SSO providers, a React administration app and a secondary lightweight React administration app for Customer Service.}
-        \resumeItem{Greenfield Phoenix application for third party mobile game developers to create accounts and submit their requests for games involving Square Enix IPs. Providing insight and access to the process, necessary paperwork, assets and feedback for their projects.}
-    \resumeItemListEnd
+        \resumeItem{Solo back-end developer in eCommerce application utilising 3D renderings to simulate custom products and dimensions.}
+        \resumeItem{Learned, maintained and wrote endpoints for Ruby-on-Rails JSON API source of truth.}
+        \resumeItem{Reworked 3D render React application to function on URL parameter data and migrated the surrounding form from React to Phoenix LiveView.}
+        \resumeItem{Ported the Rails based authentication and session systems to Phoenix and Redis.}
+        \resumeItem{Lots of miscellaneous redesign work.}
+      \resumeItemListEnd
 
     \resumeSubheading
-      {Square Enix}{April 2018 -- August 2019}
-      {Apprentice Web Developer}{London}
+      {Square Enix}{Feb 2018 -- Oct 2020}
+      {Junior Developer}{Permanent}
       \resumeItemListStart
-        \resumeItem{Greenfield React application to visualise how a webpage on internal environments looks when shared on social media platforms.}
-        \resumeItem{Greenfield Phoenix application for social media influencers to submit their contact details to Square Enix, providing an administration dashboard.}
-        \resumeItem{Developed a suite of Headless CMS APIs for publishing and serving data to a collection web services.}
+        \resumeItem{Assisted with Tomb Raider and Just Cause 4 websites.}
+        \resumeItem{Worked on SE Membership, shadowing members of the team and assisting.}
+        \resumeItem{Phoenix application for third party mobile game developers to create accounts and submit their requests for games involving Square Enix IPs.}
+        \resumeItem{React application to visualise how a webpage on internal environments looks when shared on social medias.}
+        \resumeItem{Helped on the Headless CMS in React, and with the APIs for publishing the CMS.}
+        \resumeItem{Twitch Drops.}
     \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{5pt}
+
+\section{Other Projects}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Untitled ML Project}{}
+      {}{}
+      Currently working through Machine Learning in Elixir book and building a model to predict where a football should be when it is removed from a picture.
+      
+    \resumeSubheading
+      {gw2.fish}{}
+      {}{}
+      I play Guild Wars 2 and they added fishing and a bunch of achievements for collecting fish. I build a React app that could take an API key for your account then based on your achievement progress, tell you the time of day in your zone, the available fish, where and how to catch them to complete the achievement. Its down now but the code is open source.
+      
+    \resumeSubheading
+      {Inventory Management}{}
+      {}{}
+      My parents-in-law own and operate a clothing production factory that's currently all very manual and paper based. I built a small entirely event sourced, Phoenix LiveView inventory management tool for fun. They were interested, but ultimately, it would have required a lot of integrating with other software to be truly useful and solutions for it already exist out there. Not even to mention that I didn't have that sort of time.
+      
   \resumeSubHeadingListEnd
 \vspace{5pt}
 
@@ -136,14 +169,5 @@
       {Microsoft}{}
   \resumeSubHeadingListEnd
 \vspace{8pt}
-
-\centering
-
-\section{Skills}
-\begin{tabular}{rl}
-    \textbf{Languages} & \textbf{Elixir}, \textbf{JavaScript}, TypeScript, Ruby \\
-    \textbf{Frameworks} & \textbf{Phoenix LiveView}, \textbf{React}, Express, Rails \\
-    \textbf{Tools} &  \textbf{Git}, \textbf{TDD}, \textbf{Docker}, Linux, Kubernetes, GCP, \textbf{PostgreSQL}, MongoDB, \textbf{Redis} \\
-\end{tabular}
 
 \end{document}
