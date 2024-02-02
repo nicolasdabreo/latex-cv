@@ -76,98 +76,104 @@
 \begin{document}
 
 \begin{center}
-    {\Huge \scshape Nicolas Dabreo} \\ \vspace{1pt}
-    \small \href{mailto:nicolas@megalixir.co.uk}{\raisebox{-0.2\height}\faEnvelope\  \underline{nicolas@megalixir.co.uk}} ~ 
-    \href{https://linkedin.com/in/nicolasdabreo}{\raisebox{-0.2\height}\faLinkedin\ \underline{nicolasdabreo}}  ~
-    \href{https://github.com/nicolasdabreo}{\raisebox{-0.2\height}\faGithub\ \underline{nicolasdabreo}}
+	{\Huge \scshape Nicolas Dabreo} \\ \vspace{1pt}
+	\small \href{mailto:nicolas@megalixir.co.uk}{\raisebox{-0.2\height}\faEnvelope\  \underline{nicolas@megalixir.co.uk}} ~
+	\href{https://linkedin.com/in/nicolasdabreo}{\raisebox{-0.2\height}\faLinkedin\ \underline{nicolasdabreo}}  ~
+	\href{https://github.com/nicolasdabreo}{\raisebox{-0.2\height}\faGithub\ \underline{nicolasdabreo}}
 \end{center}
 \vspace{8pt}
 
 \section{Experience}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Team Engine}{Oct 2021 -- Oct 2023}
-      {Full-Stack Developer}{Contract}
-      \resumeItemListStart
-        \resumeItem{Inherited a 5-year fintech project focused on contractor/freelancer onboarding, contracting and payment built by two junior developers who left before just before arrival. Elixir, PostgreSQL}
-        \resumeItem{Migrated multi-dyno Heroku app to highly available AWS infra due to hard cap on number of websocket connections from dynos and escalating costs, included load balancing, terraform, earthly, GitHub actions}
-        \resumeItem{Handling requested manual database changes and exports from production daily, lots of SQL}
-        \resumeItem{Custom admin dashboard to lessen the huge amount daily of database requests, Phoenix LiveView, SQL}
-        \resumeItem{Implemented project management tools and huge amounts of documentation to a company with nothing}
-        \resumeItem{Dashboard for project admins to export massive amounts of contractor timesheets in various states of approval, using long running background jobs, PubSub, PDF tools for splitting/generating/filling/splitting}
-        \resumeItem{Led another developer and a designer in a front-end overhaul project, creating a reusable component system, replacing 3000+ line jQuery file with modern JS and implementing web accessibility principles}
-        \resumeItem{Reworked S3 document storage to use presigned uploads/downloads \& background antivirus scans}
-        \resumeItem{Updated from DocuSignAPI v1 to v2 follwing its deprecation. Then expanding the implementation to allow conditional signatories on documents as well as allowing project controlled priority of signatures}
-        \resumeItem{Helped spec/plan the back-end for and then subsequently built the front-end portion of a CQRS/ES document distribution service, using Phoenix LiveView and PubSub for handling eventual consistency}
-      \resumeItemListEnd
+\resumeSubHeadingListStart
+\resumeSubheading
+{Team Engine}{Oct 2021 -- Oct 2023}
+{Full-Stack Developer}{Contract}
+\resumeItemListStart
+\resumeItem{Inherited a 5-year fintech project focused on contractor/freelancer onboarding, contracting and payment built by two junior developers who left before just before arrival (Elixir, PostgreSQL)}
+\resumeItem{Maintenance of calculation logic for evolving contracting/union regulations across multiple territories (Ireland, Iceland, UK) and jurisdictions (Construction, Actor). Translating accounting spreadsheets to code}
+\resumeItem{Migrated multi-dyno Heroku app to highly available AWS infra due to hard cap on number of websocket connections from dynos and escalating costs (load balancing, Terraform, Earthly, GitHub actions)}
+\resumeItem{Handling requested manual database changes and exports from production daily (lots of SQL)}
+\resumeItem{Custom admin dashboard to lessen the huge amount daily of database requests (Phoenix LiveView, SQL)}
+\resumeItem{Implemented project management tools, BDD, planning stages and huge amounts of documentation to a company with nothing}
+\resumeItem{Dashboard for exporting huge amounts of contractor/crew data (long running background jobs, PubSub, microservice/interface for PDF tools splitting/generating/filling/splitting)}
+\resumeItem{Led a team in a overhaul project, creating a reusable component system, replacing 3000+ line jQuery file with modern JS and implementing web accessibility principles}
+\resumeItem{Reworked S3 document storage after discovering security vulnerabilities (presigned uploads/downloads, microservice/interface for background antivirus scans, buckets for processing stages, storage cleanup)}
+\resumeItem{Updated from DocuSignAPI v1 to v2 follwing its deprecation. Then expanding the implementation to allow conditional signatories on documents as well as allowing project controlled priority of signatures}
+\resumeItem{Helped spec/plan/implement the MVP back-end of a CQRS/ES document distribution service (Commanded, LiveView)}
+\resumeItemListEnd
 
-    \resumeSubheading
-      {Stitched}{Oct 2020 -- Oct 2021}
-      {Full-Stack Developer}{Permanent}
-      \resumeItemListStart
-        \resumeItem{Solo back-end developer in eCommerce application utilising 3D renderings to simulate custom products and dimensions.}
-        \resumeItem{Learned, maintained and wrote endpoints for Ruby-on-Rails JSON API source of truth.}
-        \resumeItem{Reworked 3D render React application to function on URL parameter data and migrated the surrounding form from React to Phoenix LiveView.}
-        \resumeItem{Ported the Rails based authentication and session systems to Phoenix and Redis.}
-        \resumeItem{Lots of miscellaneous redesign work.}
-      \resumeItemListEnd
+\resumeSubheading
+{Stitched}{Oct 2020 -- Oct 2021}
+{Full-Stack Developer}{Permanent}
+\resumeItemListStart
+\resumeItem{Solo back-end developer in eCommerce application utilising 3D renderings to simulate custom products and dimensions}
+\resumeItem{Learned, maintained and wrote endpoints for Ruby-on-Rails JSON API source of truth}
+\resumeItem{Reworked Typescript based 3D renderer React application to interface with LiveView wrapper}
+\resumeItem{Ported the Rails based authentication and session systems to Phoenix and Redis}
+\resumeItem{Implemented new system for interfacing with dimensions for the product, allowing for sensible defaults to decomplicate the process for the user}
+\resumeItemListEnd
 
-    \resumeSubheading
-      {Square Enix}{Feb 2018 -- Oct 2020}
-      {Junior Developer}{Permanent}
-      \resumeItemListStart
-        \resumeItem{Assisted with Tomb Raider and Just Cause 4 websites.}
-        \resumeItem{Worked on SE Membership, shadowing members of the team and assisting.}
-        \resumeItem{Phoenix application for third party mobile game developers to create accounts and submit their requests for games involving Square Enix IPs.}
-        \resumeItem{React application to visualise how a webpage on internal environments looks when shared on social medias.}
-        \resumeItem{Helped on the Headless CMS in React, and with the APIs for publishing the CMS.}
-        \resumeItem{Twitch Drops.}
-    \resumeItemListEnd
-  \resumeSubHeadingListEnd
+\resumeSubheading
+{Square Enix}{Feb 2018 -- Oct 2020}
+{Junior Developer}{Permanent}
+\resumeItemListStart
+\resumeItem{Tomb Raider and Just Cause 4 websites (React, JavaScript, StyledComponents)}
+\resumeItem{Worked on SE Membership authentication platform, APIs for the game teams (Elixir)}
+\resumeItem{Phoenix application for third party mobile game developers to create accounts and submit their requests for games involving Square Enix IPs (Phoenix)}
+\resumeItem{Application to visualise how a webpage on internal environments looks when shared on social medias (React)}
+\resumeItem{React based Headless CMS, with the APIs for publishing content (TypeScript, React, Cowboy)}
+\resumeItem{Implemented greenfield Twitch Drops integration for Square Enix games using ES/CQRS, exposing the data on the Game APIs and working with Twitch staff}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
 \vspace{5pt}
 
 \section{Other Projects}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Untitled ML Project}{}
-      {}{}
-      Currently working through Machine Learning in Elixir book and building a model to predict where an item should be when it is removed from a picture.
-      
-    \resumeSubheading
-      {gw2.fish}{}
-      {}{}
-      I play Guild Wars 2 and they added fishing and a bunch of achievements for collecting fish. I build a React app that could take an API key for your account then based on your achievement progress, tell you the time of day in your zone, the available fish, where and how to catch them to complete the achievement. Its down now but the code is open source.
-      
-    \resumeSubheading
-      {Inventory Management}{}
-      {}{}
-      My parents-in-law own and operate a clothing production factory that's currently all very manual and paper based. I built a small entirely event sourced, Phoenix LiveView inventory management tool for fun. They were interested, but ultimately, it would have required a lot of integrating with other software to be truly useful and solutions for it already exist out there. Not even to mention that I didn't have that sort of time.
-      
-  \resumeSubHeadingListEnd
+\resumeSubHeadingListStart
+\resumeSubheading
+{Untitled ML Project}{}
+{}{}
+Currently working through Machine Learning in Elixir book and building a model to predict where an item should be when it is removed from a picture
+
+\resumeSubheading
+{gw2.fish}{}
+{}{}
+I play Guild Wars 2 and they added fishing and a bunch of achievements for collecting fish. I build a React app that could take an API key for your account then based on your achievement progress, tell you the time of day in your zone, the available fish, where and how to catch them to complete the achievement.
+
+\resumeSubheading
+{Booking Management}{}
+{}{}
+I\'m working with a previous colleague on a multi-tenant/event sourcing based booking system for campsites and small hotel services (Phoenix LiveView, Commanded)
+
+\resumeSubheading
+{Magic Commander League}{}
+{}{}
+My local game store started an event tracking points earned in games of Magic: The Gathering, so I learned Golang and created a small (single-file!) app in the space of a week which is now being used instead of a spreadsheet in the shop.
+
+\resumeSubHeadingListEnd
 \vspace{5pt}
 
 \section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Level 4 Software Development Apprenticeship}{2018 - 2019}
-      {Corndel Software Engineering Academy}{London}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Level 4 Software Development Apprenticeship}{2018 - 2019}
+{Corndel Software Engineering Academy}{London}
 
-    \resumeSubheading
-      {BTEC Level 3 Extended National Diploma in IT}{2014 - 2016}
-      {West Suffolk College}{Bury St. Edmunds}
-  \resumeSubHeadingListEnd
+\resumeSubheading
+{BTEC Level 3 Extended National Diploma in IT}{2014 - 2016}
+{West Suffolk College}{Bury St. Edmunds}
+\resumeSubHeadingListEnd
 \vspace{8pt}
 
 \section{Awards}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Software Engineering Methodologies}{2018}
-      {BCS, The Chartered Institute for IT}{}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Software Engineering Methodologies}{2018}
+{BCS, The Chartered Institute for IT}{}
 
-    \resumeSubheading
-      {Programming in HTML5 with JavaScript and CSS3}{2018}
-      {Microsoft}{}
-  \resumeSubHeadingListEnd
+\resumeSubheading
+{Programming in HTML5 with JavaScript and CSS3}{2018}
+{Microsoft}{}
+\resumeSubHeadingListEnd
 \vspace{8pt}
 
 \end{document}
